@@ -1,18 +1,22 @@
 import './App.css';
 import Header from './Components/Header/Header';
-import Home from './Components/Home/Home';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
-import Checkout from './Components/Checkout/Checkout';
+import Checkout from './Components/CheckoutComponent/Checkout/Checkout';
+import Home from './Components/HomeComponent/Home/Home';
+import Login from './Components/Login/Login/Login';
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Switch>
+          <Route path='/login'>
+            <Login />
+          </Route>
           <Route path='/checkout'>
             <Header />
             <Checkout />
@@ -24,6 +28,7 @@ function App() {
         </Switch>
       </div>
     </Router>
+
   );
 }
 

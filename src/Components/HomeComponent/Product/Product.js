@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStateValue } from '../../StateProvider';
+import { useStateValue } from '../../Redux/StateProvider';
 import './Product.css'
 import star from './star.png'
 

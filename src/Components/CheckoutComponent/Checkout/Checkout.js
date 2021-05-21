@@ -2,8 +2,8 @@ import React from 'react';
 import './Checkout.css'
 import banner from './banner.jpg'
 import SubTotal from '../SubTotal/SubTotal';
-import { useStateValue } from '../../StateProvider';
 import CheckoutProduct from '../CheckoutProduct/CheckoutProduct';
+import { useStateValue } from '../../Redux/StateProvider';
 
 const Checkout = () => {
 
