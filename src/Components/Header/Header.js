@@ -5,10 +5,17 @@ import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import { Link } from 'react-router-dom';
 import { useStateValue } from '../Redux/StateProvider';
+import { auth } from '../Firebase/FirebaseConfig';
 
 const Header = () => {
 
-    const [{ basket }, dispatch] = useStateValue()
+    const [{ basket, user }, dispatch] = useStateValue()
+
+    const handleSingOut = () => {
+        if (user) {
+            auth.signOut();
+        }
+    }
 
     return (
         <div className='header'>
@@ -27,14 +34,14 @@ const Header = () => {
 
             <div className="header__nav">
 
-                <Link to='/login'>
-                    <div className="header__option">
+                <Link to={!user && '/login'}>
+                    <div onClick={handleSingOut} className="header__option">
                         <span className="header__optionLineOne">
                             Hello Guest
                     </span>
                         <span className="header__optionLineTwo">
-                            Sign In
-                    </span>
+                            {user ? 'Sing Out' : 'Sign In'}
+                        </span>
                     </div>
                 </Link>
 

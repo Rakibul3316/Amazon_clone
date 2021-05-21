@@ -1,19 +1,38 @@
 import React, { useState } from 'react';
 import './Login.css'
 import logo from './amazon-logo.png'
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import { auth } from '../../Firebase/FirebaseConfig';
 
 const Login = () => {
 
+    const history = useHistory();
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
     const signIn = e => {
         e.preventDefault();
+
+        auth
+            .signInWithEmailAndPassword(email, password)
+            .then((auth) => {
+                history.push('/')
+            })
+            .catch(error => alert(error.message))
     }
 
     const register = e => {
         e.preventDefault();
+
+        auth
+            .createUserWithEmailAndPassword(email, password)
+            .then((auth) => {
+                console.log(auth)
+                if (auth) {
+                    history.push('/')
+                }
+            })
+            .catch(error => alert(error.message))
     }
 
 
@@ -47,7 +66,9 @@ const Login = () => {
 
                 <p>By signing-in you agree to the Amazon Fake clone Conditons of use & Sale. Please see our Privacy Notice, Our cookies Notice and Our Interest-Based Ads Notice.</p>
 
-                <button onClick={register} className='login__registerBtn'>Create your Amazon Account</button>
+                <p><b>If you don't hava an account. Please</b> <Link to='/createAccount'>Create an Account</Link></p>
+
+                {/* <button onClick={register} className='login__registerBtn'>Create your Amazon Account</button> */}
             </div>
         </div>
     );
