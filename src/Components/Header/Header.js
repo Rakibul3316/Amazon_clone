@@ -37,8 +37,8 @@ const Header = () => {
                 <Link to={!user && '/login'}>
                     <div onClick={handleSingOut} className="header__option">
                         <span className="header__optionLineOne">
-                            Hello Guest
-                    </span>
+                            Hello {!user ? 'Guest' : user.email}
+                        </span>
                         <span className="header__optionLineTwo">
                             {user ? 'Sing Out' : 'Sign In'}
                         </span>

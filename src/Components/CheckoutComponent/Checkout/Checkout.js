@@ -10,6 +10,8 @@ const Checkout = () => {
     const [{ basket }, dispatch] = useStateValue();
 
     return (
+
+
         <div className='checkout'>
             <div className="checkout__left">
                 <img
@@ -36,6 +38,7 @@ const Checkout = () => {
             <div className="checkout__right">
                 <SubTotal />
             </div>
+
         </div>
     );
 };

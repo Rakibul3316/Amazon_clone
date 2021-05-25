@@ -19,3 +19,23 @@
 .checkout__right {
     padding-left: 20px;
 }
+
+/* Media quary */
+
+@media screen and (max-width: 420px) {
+    .checkout {
+        flex-direction: column-reverse;
+    }
+
+    .checkout__right {
+        padding-bottom: 20px;
+    }
+
+    .checkoutProduct__title {
+        font-size: 14px;
+    }
+
+    .checkoutProduct__price {
+        margin: 5px 0px;
+    }
+}

@@ -35,7 +35,7 @@ function App() {
         })
       }
     })
-  }, [])
+  }, [dispatch])
 
   return (
     <Router>

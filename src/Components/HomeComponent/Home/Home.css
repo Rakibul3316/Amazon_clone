@@ -18,3 +18,28 @@
     margin-bottom: -300px;
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
+
+/* Media Quary */
+
+@media screen and (max-width: 420px) {
+    .home__img {
+        margin-bottom: -90px;
+    }
+
+    .home__row {
+        flex-direction: column;
+    }
+
+    .product {
+        width: 85%;
+    }
+
+    .product__title {
+        font-size: 14px;
+    }
+
+    .product__rating img {
+        width: 17px;
+    }
+}
+

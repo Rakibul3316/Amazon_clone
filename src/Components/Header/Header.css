@@ -69,3 +69,28 @@
     margin-right: 10px;
 }
 
+/* Media quary */
+
+@media screen and (max-width: 420px) {
+    .header__option {
+        display: none;
+    }
+
+    .header__logo {
+        width: 65px;
+        margin: 0 10px;
+        margin-top: 18px;
+    }
+
+    .header__search {
+        margin-right: 10px;
+    }
+
+    .header-searchInput {
+        height: 8px;
+    }
+
+    .header__searchIcon {
+        height: 18px !important;
+    }
+}
