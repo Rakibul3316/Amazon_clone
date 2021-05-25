@@ -34,3 +34,13 @@
     border-color: #a88734 #9c7e31 #846a29;
     color: #111;
 }
+
+@media screen and (max-width: 420px) {
+    .checkoutProduct__image {
+        width: 110px;
+    }
+    
+    .checkoutProduct__title {
+        font-size: 15px;
+    }
+}

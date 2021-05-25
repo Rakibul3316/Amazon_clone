@@ -43,3 +43,22 @@
     }
 }
 
+@media screen and (max-width: 420px) {
+    .home__img {
+        margin-bottom: -70px;
+    }
+
+    .product__rating img {
+        width: 15px;
+        /* margin-top: 15px; */
+    }
+
+    .product {
+        width: 81%;
+    }
+
+    .product > img {
+        margin-top: 15px;
+    }
+}
+

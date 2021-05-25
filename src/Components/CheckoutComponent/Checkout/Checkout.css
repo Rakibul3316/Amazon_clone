@@ -39,3 +39,13 @@
         margin: 5px 0px;
     }
 }
+
+@media screen and (max-width: 420px) {
+    .checkout__right {
+        padding-left: 0;
+    }
+
+    .checkoutProduct__title {
+        font-size: 13px;
+    }
+}
